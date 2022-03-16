@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule language="beanshell" name="Rule02">
+  <Source>
+  import java.util.List;
+
+  import sailpoint.api.SailPointContext;
+  import sailpoint.object.Identity;
+  import sailpoint.tools.GeneralException;
+
+
+
+
+  List allIdentiesNames = context.getObjects(Identity.class);
+
+  if (allIdentiesNames != null) {
+
+    for (Identity identity : allIdentiesNames) {
+      System.out.println("Idenity Name"+identity.getName());
+        System.out.println("Idenity first Name"+identity.getFirstname());
+            System.out.println("Idenity first Name"+identity.getLastname());
+    }
+
+  }
+
+
+
+
+  </Source>
+</Rule>
